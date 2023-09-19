@@ -28,7 +28,7 @@
                 "lookup": "id",
                 "from": {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/cxhhhh/FIT3179_Project2/main/us_county_sociohealth_data.csv"
+                        "url": "https://raw.githubusercontent.com/cxhhhh/cxhhhh.github.io/main/data/us_county_sociohealth_data.csv"
                     },
                     "key": "fips",
                     "fields": ["percent_vaccinated", "county"]
