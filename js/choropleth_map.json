@@ -1,0 +1,94 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Percentage of vaccinated of each County in the US",
+      "fontSize":18
+    },
+    "width": 1000,
+    "height": 500,
+    "data": {
+      "url": "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json",
+      "format": {
+        "type": "topojson",
+        "feature": "counties"
+      }
+    },
+    
+    "layer": [
+        {
+            "transform": [  
+                {"calculate": "'Data is not available in ' + datum.properties.name", "as": "note"}
+            ],
+            "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "#949697d1"},
+            "encoding": {"tooltip": {"field": "note"}}
+        },
+        
+        {
+            "transform": [{
+                "lookup": "id",
+                "from": {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/cxhhhh/FIT3179_Project2/main/us_county_sociohealth_data.csv"
+                    },
+                    "key": "fips",
+                    "fields": ["percent_vaccinated", "county"]
+                }
+            }],
+            "params": [
+                {"name": "hover", "select": {"type": "point", "on": "mouseover"}},
+                {"name": "select", "select": "point"}
+            ],
+            "projection": {
+                "type": "albersUsa"
+            },
+            "mark": {
+                "type": "geoshape",
+                "stroke": "#182f8f",
+                "strokeWidth": 0.5
+            },
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "select",
+                        "field": "percent_vaccinated",
+                        "type": "quantitative",
+                        "legend": {
+                            "title": "Percentage of vaccinated",
+                            "titleFontSize": 12,
+                            "direction": "horizontal",
+                            "orient":"bottom-right",
+                            "gradientLength": 140,
+                            "padding":-10
+                        },
+                        "scale": {
+                            "range": ["#ffffd9",
+                                "#edf8b1",
+                                "#c7e9b4",
+                                "#41b6c4",
+                                "#1d91c0",
+                                "#253494",
+                                "#081d58"]
+                        }
+                    },
+                    "value": "grey"
+                },
+                "opacity": {
+                    "condition": {
+                        "param": "select",
+                        "value": 1
+                    },
+                  "value": 0.2
+                },
+                "tooltip": [
+                    {"field": "county", "type": "nominal", "title": "County"},
+                    {
+                        "field": "percent_vaccinated",
+                        "type": "quantitative",
+                        "title": "Percentage of vaccinated"
+                    }
+                ]
+            }
+        }
+    ]
+    
+}
