@@ -1,17 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Percentage of vaccinated of each County in the US",
-      "fontSize":18
+        "text": "Percentage of vaccinated of each County in the US in 2020",
+        "fontSize":18
     },
     "width": 1000,
     "height": 500,
     "data": {
       "url": "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json",
       "format": {
-        "type": "topojson",
-        "feature": "counties"
-      }
+            "type": "topojson",
+            "feature": "counties"
+        }
     },
     
     "layer": [
