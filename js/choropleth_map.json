@@ -5,6 +5,7 @@
         "fontSize":18
     },
     "view": {"stroke":"#f1fcfe9b"},
+    "background":"#f1fcfe9b",
     "width": 1000,
     "height": 500,
     "data": {
@@ -90,7 +91,6 @@
                 ]
             }
         }
-    ],
-    "background":"#f1fcfe9b"
+    ]
     
 }
