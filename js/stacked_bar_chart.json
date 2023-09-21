@@ -1,0 +1,134 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Unhealthy habits of Top 15 COVID-19 Deaths States in the US in 2020",
+        "fontSize": 18
+    },
+    "view": {"stroke":"#f1fcfe9b"},
+    "background":"#f1fcfe9b",
+    "width": 1000,
+    "height": 500,
+    "data": {"url": "https://raw.githubusercontent.com/cxhhhh/cxhhhh.github.io/main/data/cxh_cleared_unhealthy_habit.csv"},
+    
+    "params": [
+        {
+            "name": "unhealthy_habit_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Excessive drinking",
+                    "Insufficient sleep",
+                    "Obesity",
+                    "Smoke"
+                ],
+                "labels":[
+                    "Show All",
+                    "Excessive drinking",
+                    "Insufficient sleep",
+                    "Obesity",
+                    "Smoke"
+                ],
+                "name": "Unhealthy Habits Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {"filter": "datum.num_death > 90000"},
+        {"filter": "unhealthy_habit_selection == null || datum.unhealthy_habit == unhealthy_habit_selection"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "state",
+            "type": "ordinal",
+            "title": "States",
+            "axis":{
+                "titleFontSize": 14,
+                "titlePadding": 20,
+                "labelFontSize": 12,
+                "labelAngle": 0,
+                "labelPadding": 10
+            }
+        },
+        "y": {
+            "field": "value",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Total habit cases",
+            "axis":{
+                "titleFontSize": 14,
+                "titlePadding": 20,
+                "labelFontSize": 12,
+                "grid": false
+            }
+        }  
+    },
+    "layer": [
+        {
+            "mark":{
+                "type": "bar",
+                "width": 28
+            },
+            "encoding": {
+                "tooltip":[
+                    {"field":"unhealthy_habit", "type": "nominal","title":"Unhealthy Habit"},
+                    {"field":"value", "type": "nominal","title":"Number of Cases", "format":".0f"}
+                ],
+                "color": {
+                    "field": "unhealthy_habit",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": ["Excessive drinking", "Insufficient sleep", "Obesity", "Smoke"],
+                        "range": [ "#99d8c9", "#bcbddc", "#fdd0a2","#bdbdbd"]
+                    },
+                    "title": "Unhealthy Habits",
+                    "legend":{
+                        "orient": "top-left",
+                        "padding": 5,
+                        "rowPadding": 8,
+                        "titleFontSize": 14,
+                        "labelFontSize": 12
+                    }
+                }
+            }
+        },
+    {
+      "mark":{
+          "type": "text",
+          "align":"center",
+          "baseline":"bottom",
+          "color":"grey",
+          "size":12
+        },
+        "encoding": {
+            "text":{
+                "field":"value",
+                "aggregate": "sum",
+                "type": "quantitative",
+                "format":".0f"
+            }
+        }
+    },
+    {
+      "transform": [
+        {"filter":"datum.state == 'Texas'"},
+        {
+            "calculate": "'People in Texas have the unhealthiest habits.;The deaths due to COVID-19 stands at 295950.'",
+            "as": "annotation_ori"
+        },
+        {
+            "calculate": "split(datum.annotation_ori,';')",
+            "as": "annotation"
+        }
+      ],
+      "encoding": {
+        "text": {"field": "annotation"},
+        "color": {"value": "black"},
+        "size": {"value": 14}
+      },
+      "mark": {"type": "text", "dx": -200, "dy": 20}
+    }
+  ]
+}
+  
+
