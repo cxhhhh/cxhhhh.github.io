@@ -1,0 +1,217 @@
+state,unhealthy habit,value,num_death
+Alabama,Smoke,1339.278504,81791
+Alaska,Smoke,603.3870327,8087
+Arizona,Smoke,247.258666,80394
+Arkansas,Smoke,1529.163651,48017
+California,Smoke,701.3127864,347837
+Colorado,Smoke,915.0398436,52174
+Connecticut,Smoke,94.98895934,35163
+Delaware,Smoke,48.1513188,12674
+District of Columbia,Smoke,15.96559215,8387
+Florida,Smoke,1285.804787,263456
+Georgia,Smoke,2903.75868,131421
+Hawaii,Smoke,62.60353547,14148
+Idaho,Smoke,622.533261,17620
+Illinois,Smoke,1615.269618,143269
+Indiana,Smoke,1833.751121,90977
+Iowa,Smoke,1568.540869,34848
+Kansas,Smoke,1699.462887,32816
+Kentucky,Smoke,2674.929757,74253
+Louisiana,Smoke,1394.747154,71605
+Maine,Smoke,257.9636455,18065
+Maryland,Smoke,346.0934001,70250
+Massachusetts,Smoke,185.7813272,67991
+Michigan,Smoke,1457.997039,131562
+Minnesota,Smoke,1303.595109,50696
+Mississippi,Smoke,1668.107306,50862
+Missouri,Smoke,2371.630117,99556
+Montana,Smoke,944.6638737,12372
+Nebraska,Smoke,1360.084915,18443
+Nevada,Smoke,298.3605357,38029
+New Hampshire,Smoke,148.4627272,15688
+New Jersey,Smoke,295.4359839,91120
+New Mexico,Smoke,563.1984957,27746
+New York,Smoke,966.690045,262854
+North Carolina,Smoke,1747.506506,134245
+North Dakota,Smoke,906.3440139,6767
+Northern Mariana Islands,Smoke,0,0
+Ohio,Smoke,1689.554028,167344
+Oklahoma,Smoke,1466.29212,60262
+Oregon,Smoke,554.8956988,46503
+Pennsylvania,Smoke,1201.952311,165456
+Puerto Rico,Smoke,0,0
+Rhode Island,Smoke,66.48484105,11529
+South Carolina,Smoke,830.1004713,75507
+South Dakota,Smoke,1125.08077,9097
+Tennessee,Smoke,2122.684344,106691
+Texas,Smoke,3795.451786,295950
+Utah,Smoke,291.4378692,24555
+Vermont,Smoke,204.6117547,7277
+Virgin Islands,Smoke,0,0
+Virginia,Smoke,2259.828624,93751
+Washington,Smoke,548.4080682,74436
+West Virginia,Smoke,1258.544282,34459
+Wisconsin,Smoke,1158.24176,63570
+Wyoming,Smoke,369.2847191,6926
+Alabama,Obesity,2507.9,81791
+Alaska,Obesity,1001.4,8087
+Arizona,Obesity,449.3,80394
+Arkansas,Obesity,2698.8,48017
+California,Obesity,1590.8,347837
+Colorado,Obesity,1586.2,52174
+Connecticut,Obesity,213.6,35163
+Delaware,Obesity,97,12674
+District of Columbia,Obesity,23.5,8387
+Florida,Obesity,2089.2,263456
+Georgia,Obesity,5477.2,131421
+Hawaii,Obesity,112.2,14148
+Idaho,Obesity,1331.3,17620
+Illinois,Obesity,3099.3,143269
+Indiana,Obesity,3128.6,90977
+Iowa,Obesity,3380,34848
+Kansas,Obesity,3614.4,32816
+Kentucky,Obesity,4230.2,74253
+Louisiana,Obesity,2388.8,71605
+Maine,Obesity,493.3,18065
+Maryland,Obesity,803.4,70250
+Massachusetts,Obesity,354.8,67991
+Michigan,Obesity,2774.6,131562
+Minnesota,Obesity,2748.6,50696
+Mississippi,Obesity,3135.2,50862
+Missouri,Obesity,3848.981804,99556
+Montana,Obesity,1638.5,12372
+Nebraska,Obesity,3137.5,18443
+Nevada,Obesity,502.8,38029
+New Hampshire,Obesity,288.4,15688
+New Jersey,Obesity,576.4,91120
+New Mexico,Obesity,950.4,27746
+New York,Obesity,1938.716529,262854
+North Carolina,Obesity,3380.2,134245
+North Dakota,Obesity,1765.2,6767
+Northern Mariana Islands,Obesity,0,0
+Ohio,Obesity,3019.9,167344
+Oklahoma,Obesity,2705.4,60262
+Oregon,Obesity,1135.2,46503
+Pennsylvania,Obesity,2180.7,165456
+Puerto Rico,Obesity,0,0
+Rhode Island,Obesity,131.7,11529
+South Carolina,Obesity,1672.6,75507
+South Dakota,Obesity,2187,9097
+Tennessee,Obesity,3208.8,106691
+Texas,Obesity,7936.9,295950
+Utah,Obesity,780.9,24555
+Vermont,Obesity,389.7,7277
+Virgin Islands,Obesity,0,0
+Virginia,Obesity,4328.2,93751
+Washington,Obesity,1208.3,74436
+West Virginia,Obesity,2040.6,34459
+Wisconsin,Obesity,2345.9,63570
+Wyoming,Obesity,663.4,6926
+Alabama,Excessive drinking,907.0810318,81791
+Alaska,Excessive drinking,608.088642,8087
+Arizona,Excessive drinking,238.601669,80394
+Arkansas,Excessive drinking,1030.677439,48017
+California,Excessive drinking,1150.321389,347837
+Colorado,Excessive drinking,1164.464308,52174
+Connecticut,Excessive drinking,144.4616138,35163
+Delaware,Excessive drinking,52.4529901,12674
+District of Columbia,Excessive drinking,27.3130182,8387
+Florida,Excessive drinking,1175.838218,263456
+Georgia,Excessive drinking,2369.130465,131421
+Hawaii,Excessive drinking,98.09069442,14148
+Idaho,Excessive drinking,687.5987462,17620
+Illinois,Excessive drinking,2033.27345,143269
+Indiana,Excessive drinking,1576.113618,90977
+Iowa,Excessive drinking,2012.790333,34848
+Kansas,Excessive drinking,1767.791942,32816
+Kentucky,Excessive drinking,1880.396125,74253
+Louisiana,Excessive drinking,1193.185381,71605
+Maine,Excessive drinking,311.1445438,18065
+Maryland,Excessive drinking,402.6392433,70250
+Massachusetts,Excessive drinking,300.4778633,67991
+Michigan,Excessive drinking,1580.690817,131562
+Minnesota,Excessive drinking,1808.857711,50696
+Mississippi,Excessive drinking,1096.635026,50862
+Missouri,Excessive drinking,2033.288144,99556
+Montana,Excessive drinking,1166.020153,12372
+Nebraska,Excessive drinking,1855.653057,18443
+Nevada,Excessive drinking,344.8243901,38029
+New Hampshire,Excessive drinking,193.7136809,15688
+New Jersey,Excessive drinking,388.8348289,91120
+New Mexico,Excessive drinking,517.9293709,27746
+New York,Excessive drinking,1260.700772,262854
+North Carolina,Excessive drinking,1575.026491,134245
+North Dakota,Excessive drinking,1136.761332,6767
+Northern Mariana Islands,Excessive drinking,0,0
+Ohio,Excessive drinking,1604.378657,167344
+Oklahoma,Excessive drinking,1030.033819,60262
+Oregon,Excessive drinking,660.8814261,46503
+Pennsylvania,Excessive drinking,1320.220655,165456
+Puerto Rico,Excessive drinking,0,0
+Rhode Island,Excessive drinking,101.2977524,11529
+South Carolina,Excessive drinking,713.6765439,75507
+South Dakota,Excessive drinking,1183.035554,9097
+Tennessee,Excessive drinking,1320.731759,106691
+Texas,Excessive drinking,4558.42076,295950
+Utah,Excessive drinking,338.4104729,24555
+Vermont,Excessive drinking,276.5979178,7277
+Virgin Islands,Excessive drinking,0,0
+Virginia,Excessive drinking,2275.192725,93751
+Washington,Excessive drinking,691.7532838,74436
+West Virginia,Excessive drinking,676.2617488,34459
+Wisconsin,Excessive drinking,1788.046996,63570
+Wyoming,Excessive drinking,433.5712324,6926
+Alabama,Insufficient sleep,2589.896286,81791
+Alaska,Insufficient sleep,930.3531697,8087
+Arizona,Insufficient sleep,484.2331675,80394
+Arkansas,Insufficient sleep,2604.935846,48017
+California,Insufficient sleep,1851.895957,347837
+Colorado,Insufficient sleep,1723.50959,52174
+Connecticut,Insufficient sleep,255.2448697,35163
+Delaware,Insufficient sleep,105.4689619,12674
+District of Columbia,Insufficient sleep,36.20131325,8387
+Florida,Insufficient sleep,2377.344766,263456
+Georgia,Insufficient sleep,5889.672838,131421
+Hawaii,Insufficient sleep,196.4098382,14148
+Idaho,Insufficient sleep,1288.411229,17620
+Illinois,Insufficient sleep,3134.778572,143269
+Indiana,Insufficient sleep,3135.327463,90977
+Iowa,Insufficient sleep,2712.373353,34848
+Kansas,Insufficient sleep,3097.497285,32816
+Kentucky,Insufficient sleep,4643.179493,74253
+Louisiana,Insufficient sleep,2386.958382,71605
+Maine,Insufficient sleep,510.2892983,18065
+Maryland,Insufficient sleep,818.5837279,70250
+Massachusetts,Insufficient sleep,456.1378303,67991
+Michigan,Insufficient sleep,2902.229227,131562
+Minnesota,Insufficient sleep,2530.335988,50696
+Mississippi,Insufficient sleep,2905.963405,50862
+Missouri,Insufficient sleep,3825.267528,99556
+Montana,Insufficient sleep,1525.757538,12372
+Nebraska,Insufficient sleep,2585.382063,18443
+Nevada,Insufficient sleep,581.7438385,38029
+New Hampshire,Insufficient sleep,313.4913445,15688
+New Jersey,Insufficient sleep,796.0578369,91120
+New Mexico,Insufficient sleep,1038.672309,27746
+New York,Insufficient sleep,2212.018177,262854
+North Carolina,Insufficient sleep,3365.607543,134245
+North Dakota,Insufficient sleep,1484.847035,6767
+Northern Mariana Islands,Insufficient sleep,0,0
+Ohio,Insufficient sleep,3259.407362,167344
+Oklahoma,Insufficient sleep,2579.520466,60262
+Oregon,Insufficient sleep,1086.22114,46503
+Pennsylvania,Insufficient sleep,2335.356927,165456
+Puerto Rico,Insufficient sleep,0,0
+Rhode Island,Insufficient sleep,167.135023,11529
+South Carolina,Insufficient sleep,1711.715114,75507
+South Dakota,Insufficient sleep,1728.187583,9097
+Tennessee,Insufficient sleep,3393.713249,106691
+Texas,Insufficient sleep,8070.690035,295950
+Utah,Insufficient sleep,848.4517998,24555
+Vermont,Insufficient sleep,420.4738522,7277
+Virgin Islands,Insufficient sleep,0,0
+Virginia,Insufficient sleep,4721.936532,93751
+Washington,Insufficient sleep,1160.36494,74436
+West Virginia,Insufficient sleep,2137.793724,34459
+Wisconsin,Insufficient sleep,2294.170133,63570
+Wyoming,Insufficient sleep,682.6065309,6926
