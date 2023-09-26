@@ -1,0 +1,186 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "title": {
+        "text": "Physically inactive and insufficient sleep of top 15 COVID-19 states",
+        "dx": -100,
+        "dy": 500},
+    "view": {"stroke":"#f1fcfe9b"},
+    "background":"#f1fcfe9b",
+    "width": 500,
+    "height": 550,
+    "padding": 40,
+    "autosize": {"type": "none", "contains": "padding"},
+  
+    "signals": [
+        {"name": "radius", "update": "width / 2"}
+    ],
+  
+    "data": [
+        {
+            "name": "table",
+            "values": [
+                {"state": "California", "value": 1230, "category": "Physically inactive"},
+                {"state": "Florida", "value": 2028.9, "category": "Physically inactive"},
+                {"state": "Georgia", "value": 4905.7, "category": "Physically inactive"},
+                {"state": "Illinois", "value": 2633.8, "category": "Physically inactive"},
+                {"state": "Indiana", "value": 2625, "category": "Physically inactive"},
+                {"state": "Michigan", "value": 2051.6, "category": "Physically inactive"},
+                {"state": "Missouri", "value": 3393.239531, "category": "Physically inactive"},
+                {"state": "New Jersey", "value": 549.8, "category": "Physically inactive"},
+                {"state": "New York", "value": 1590.195824, "category": "Physically inactive"},
+                {"state": "North Carolina", "value": 2780.5, "category": "Physically inactive"},
+                {"state": "Ohio", "value": 2548.3, "category": "Physically inactive"},
+                {"state": "Pennsylvania", "value": 1696.5, "category": "Physically inactive"},
+                {"state": "Tennessee", "value": 2853.4, "category": "Physically inactive"},
+                {"state": "Texas", "value": 6930.7, "category": "Physically inactive"},
+                {"state": "Virginia", "value": 3545, "category": "Physically inactive"},
+
+                {"state": "California", "value": 1851.895957, "category": "Insufficient Sleep"},
+                {"state": "Florida", "value": 2377.344766, "category": "Insufficient Sleep"},
+                {"state": "Georgia", "value": 5889.672838, "category": "Insufficient Sleep"},
+                {"state": "Illinois", "value": 3134.778572, "category": "Insufficient Sleep"},
+                {"state": "Indiana", "value": 3135.327463, "category": "Insufficient Sleep"},
+                {"state": "Michigan", "value": 2902.229227, "category": "Insufficient Sleep"},
+                {"state": "Missouri", "value": 3825.267528, "category": "Insufficient Sleep"},
+                {"state": "New Jersey", "value": 796.0578369, "category": "Insufficient Sleep"},
+                {"state": "New York", "value": 2212.018177, "category": "Insufficient Sleep"},
+                {"state": "North Carolina", "value": 3365.607543, "category": "Insufficient Sleep"},
+                {"state": "Ohio", "value": 3259.407362, "category": "Insufficient Sleep"},
+                {"state": "Pennsylvania", "value": 2335.356927, "category": "Insufficient Sleep"},
+                {"state": "Tennessee", "value": 3393.713249, "category": "Insufficient Sleep"},
+                {"state": "Texas", "value": 8070.690035, "category": "Insufficient Sleep"},
+                {"state": "Virginia", "value": 4721.936532, "category": "Insufficient Sleep"}
+            ]
+        },
+        {
+            "name": "states",
+            "source": "table",
+            "transform": [
+                {
+                    "type": "aggregate",
+                    "groupby": ["state"]
+                }
+            ]
+        }
+    ],
+  
+    "scales": [
+        {
+            "name": "angular",
+            "type": "point",
+            "range": {"signal": "[-PI, PI]"},
+            "padding": 0.5,
+            "domain": {"data": "table", "field": "state"}
+        },
+        {
+            "name": "radial",
+            "type": "linear",
+            "range": {"signal": "[0, radius]"},
+            "zero": true,
+            "nice": false,
+            "domain": {"data": "table", "field": "value"},
+            "domainMin": 0
+        },
+        {
+            "name": "color",
+            "type": "ordinal",
+            "domain": {"data": "table", "field": "category"},
+            "range": ["#253494", "#fb0f6e"]
+        }
+    ],
+  
+    "encode": {
+        "enter": {
+            "x": {"signal": "radius"},
+            "y": {"signal": "radius"}
+        }
+    },
+  
+    "marks": [
+        {
+            "type": "group",
+            "name": "categories",
+            "zindex": 1,
+            "from": {
+                "facet": {"data": "table", "name": "facet", "groupby": ["category"]}
+            },
+            "marks": [
+                {
+                    "type": "line",
+                    "name": "category-line",
+                    "from": {"data": "facet"},
+                    "encode": {
+                        "enter": {
+                            "interpolate": {"value": "linear-closed"},
+                            "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.state))"},
+                            "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.state))"},
+                            "stroke": {"scale": "color", "field": "category"},
+                            "strokeWidth": {"value": 1.5},
+                            "fill": {"scale": "color", "field": "category"},
+                            "fillOpacity": {"value": 0.2},
+                            "tooltip": {
+                                "signal": "{'State': datum.state, 'Value': datum.value, 'Category': datum.category}"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "rule",
+            "name": "radial-grid",
+            "from": {"data": "states"},
+            "zindex": 0,
+            "encode": {
+                "enter": {
+                    "x": {"value": 0},
+                    "y": {"value": 0},
+                    "x2": {"signal": "radius * cos(scale('angular', datum.state))"},
+                    "y2": {"signal": "radius * sin(scale('angular', datum.state))"},
+                    "stroke": {"value": "lightgray"}
+                }
+            }
+        },
+        {
+            "type": "text",
+            "name": "state-label",
+            "from": {"data": "states"},
+            "zindex": 1,
+            "encode": {
+                "enter": {
+                    "x": {"signal": "(radius + 5) * cos(scale('angular', datum.state))"},
+                    "y": {"signal": "(radius + 5) * sin(scale('angular', datum.state))"},
+                    "text": {"field": "state"},
+                    "align": [
+                        {
+                            "test": "abs(scale('angular', datum.state)) > PI / 2",
+                            "value": "center"
+                        },
+                        {"value": "center"}
+                    ],
+                    "baseline": [
+                        {"test": "scale('angular', datum.state) > 0", "value": "top"},
+                        {"test": "scale('angular', datum.state) == 0", "value": "middle"},    
+                        {"value": "bottom"}
+                    ],
+                    "fill": {"value": "black"},
+                    "fontWeight": {"value": "bold"}
+                }
+            }
+        },
+        {
+            "type": "line",
+            "name": "outer-line",
+            "from": {"data": "radial-grid"},
+            "encode": {
+                "enter": {
+                    "interpolate": {"value": "linear-closed"},
+                    "x": {"field": "x2"},
+                    "y": {"field": "y2"},
+                    "stroke": {"value": "lightgray"},
+                    "strokeWidth": {"value": 1}
+                }
+            }
+        }
+    ]
+}
