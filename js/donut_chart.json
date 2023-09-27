@@ -1,0 +1,99 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "view": {"stroke":"#f1fcfe9b"},
+    "background":"#f1fcfe9b",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "values": [
+            {"state": "California", "value": 38654206},
+            {"state": "Florida", "value": 19934451},
+            {"state": "Georgia", "value": 10099320},
+            {"state": "Illinois", "value": 12851684},
+            {"state": "Indiana", "value": 6589578},
+            {"state": "Michigan", "value": 9909600},
+            {"state": "Missouri", "value": 7172723},
+            {"state": "New Jersey", "value": 8915456},
+            {"state": "New York", "value": 28159418},
+            {"state": "North Carolina", "value": 9940828},
+            {"state": "Ohio", "value": 11586941},
+            {"state": "Pennsylvania", "value": 12783977},
+            {"state": "Tennessee", "value": 2853.4},
+            {"state": "Texas", "value": 26956435},
+            {"state": "Virginia", "value": 8310301}
+        ]
+    },
+  
+    "layer": [
+        {
+            "params": [
+                {"name": "hover", "select": {"type": "point", "on": "mouseover"}}
+            ],
+            "mark": {"type": "arc", "innerRadius": 90, "stroke": "white"},
+            "encoding": {
+                "theta": {"field": "value", "type": "quantitative"},
+                "color": {"field": "state", 
+                    "type": "nominal", 
+                    "scale": {"scheme": "tableau20"}, 
+                    "legend": {"title": "States"}
+                },
+                "tooltip":[
+                    {"field": "state", "type": "nominal", "title": "State"},
+                    {"field": "value", "type": "quantitative", "title": "Total Population"}
+                ],
+                "strokeWidth": {
+                    "condition": [{"param": "hover", "empty": false, "value": 3}],
+                    "value": 0
+                },
+                "order": {"field": "value", "type": "quantitative", "sort": "ascending"}
+            }
+        },
+  
+        {
+            "transform": [{"calculate": "'Total Population'", "as": "text_annotation"}],
+            "mark": {"type": "text"},
+            "encoding": {
+            "text": {"field": "text_annotation"},
+            "color": {"value": "#1d91c0"},
+            "size": {"value": 18}
+            }
+        },
+        {
+            "transform": [{"calculate": "'California'", "as": "text"}],
+            "mark": {"type": "text", "dx": -80, "dy": -110},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Florida'", "as": "text"}],
+            "mark": {"type": "text", "dx": -10, "dy": 150},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12}
+            }
+        },
+        {
+            "transform": [{"calculate": "'New York'", "as": "text"}],
+            "mark": {"type": "text", "dx": -145, "dy": 0},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Texas'", "as": "text"}],
+            "mark": {"type": "text", "dx": -105, "dy": 110},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12}
+            }
+        }
+  
+    ]
+}
