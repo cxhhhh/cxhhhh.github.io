@@ -3,7 +3,7 @@
     "title": {
         "text": "Physically inactive and insufficient sleep of top 15 COVID-19 states",
         "dx": -100,
-        "dy": 500},
+        "dy": 510},
     "view": {"stroke":"#f1fcfe9b"},
     "background":"#f1fcfe9b",
     "width": 500,
@@ -181,6 +181,15 @@
                     "strokeWidth": {"value": 1}
                 }
             }
+        }
+    ],
+    "legends": [
+        {
+            "fill": "color",
+            "title": "Unhealthy Types",
+            "orient": "right",
+            "offset": -500,
+            "padding": 210
         }
     ]
 }
