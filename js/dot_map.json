@@ -24,7 +24,7 @@
             "transform": [
                 {"calculate": "'State: ' + datum.properties.name", "as": "note"}
             ],
-            "mark": {"type": "geoshape", "fill": "#ffffd9", "stroke": "#f9f9db", "strokeWidth": 1.5},
+            "mark": {"type": "geoshape", "fill": "#ffffd9", "stroke": "#c6e2f0", "strokeWidth": 1.5},
             "encoding": {"tooltip": {"field": "note"}}
         },
 
