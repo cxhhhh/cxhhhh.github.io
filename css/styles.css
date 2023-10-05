@@ -1,4 +1,43 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+.page {
+    width: 1100px;
+    background-color: #f1fcfe9b;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
 .vis-container {
     width: 100%;
-	background-color: #f1fcfe9b
+	/* background-color: #f1fcfe9b */
+}
+
+.vis50-container {
+    width: 50%;
+	/* background-color: #f1fcfe9b */
+}
+
+.spaceBtwGraph{
+    height: 30px;
+}
+
+.GraphHeading{
+    /* font-family:'ZCOOL QingKe HuangYou', cursive; */
+    font-weight: 700;
+    font-size: 45px;
+    /* text-decoration: overline; */
+    color: Black;
+    text-align: center;
+    word-spacing: 15px;
+}
+
+.space{
+    height: 15px;
+}
+
+.pure-g {
+    margin-bottom: 40px;
 }

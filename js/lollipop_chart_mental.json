@@ -1,0 +1,118 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "view": {"stroke":"#f1fcfe9b"},
+    "background":"#f1fcfe9b",
+    "width": 500,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/cxhhhh/cxhhhh.github.io/main/data/cxh_cleared_us_county_sociohealth_data.xlsx.csv"
+    },
+    "transform": [
+      {"filter": "datum.percent_frequent_mental_distress >= 0"},
+      {"filter": "datum.num_deaths > 90000"}
+    ],
+    "layer": [
+      {
+        "params": [
+          {
+            "name": "highlight",
+            "select": {"type": "point","on": "mouseover"}
+          },
+          {
+            "name": "select",
+            "select": "point"
+          }
+        ],
+        "mark": {"type": "bar","size":8},
+        "encoding": {
+          "y": {
+            "field": "state", 
+            "type": "ordinal", 
+            "title": "States",
+            "sort":"-x",
+            "axis":{
+              "titleFontSize":14,
+              "titleAngle": 0,
+              "titleY": -10,
+              "titleX": -45,
+              "labelFontSize":12,
+              "labelAlign":"center",
+              "labelPadding": 40
+            }
+          },
+          "x": {
+            "aggregate": "sum",
+            "field": "percent_frequent_mental_distress",
+            "title": "Total Percentage of Frequent Mental Distress",
+            "axis":{
+              "titleFontSize":14,
+              "titlePadding": 20,
+              "labelFontSize":12,
+              "grid": false
+            }
+          },
+          "fill": {"value": "#fcc5c0"},
+          "fillOpacity": {
+            "condition": {
+              "param": "select",
+              "value": 1
+            },
+            "value": 0.2
+          },
+          "strokeWidth": {
+            "condition": [
+              {
+                "param": "select",
+                "empty": false,
+                "value": 1
+              },
+              {
+                "param": "highlight",
+                "empty": false,
+                "value": 1
+              }
+            ],
+            "value": 0
+          },
+          "tooltip":[
+            {"field": "state", "type": "nominal", "title": "State"},
+            {"field": "percent_frequent_mental_distress", 
+              "type": "quantitative", 
+              "title": "Total Percentage of Frequent Mental Distress"}
+          ],
+          "color":{
+            "legend":null,
+            "field":"state",
+            "type": "nominal"
+          }
+        }
+      },
+      {
+        "mark": {"type": "point", "size": 250, "filled": true},
+        "encoding": {
+            "y": {
+              "field": "state", 
+              "type": "ordinal", 
+              "title": "States",
+              "sort":"-x"
+            },
+            "x": {
+              "aggregate": "sum",
+              "field": "percent_frequent_mental_distress"
+            },
+            "tooltip":[
+              {"field": "state", "type": "nominal", "title": "State"},
+              {"field": "percent_frequent_mental_distress", "type": "quantitative", "title": "Total Percentage of Frequent Mental Distress"}
+            ],
+            "color":{
+              "legend":null,
+              "field":"state",
+              "type": "nominal",
+              "scale": {"scheme": "tableau20"}
+            }
+          }
+      }
+
+    ]
+    
+}
