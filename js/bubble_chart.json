@@ -118,7 +118,7 @@
           "size": {"signal": "scale('size', datum.num_deaths)"},
           "stroke": {"value": "white"},
           "strokeWidth": {"value": 2},
-          "tooltip": {"signal": "{'State:': datum.state, 'Number of Deaths:': datum.num_deaths}"}
+          "tooltip": {"signal": "{'State': datum.state, 'Number of Deaths': datum.num_deaths}"}
         }
       },
       "transform": [
