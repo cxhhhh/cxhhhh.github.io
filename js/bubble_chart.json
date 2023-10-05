@@ -1,158 +1,157 @@
 {
-    "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 800,
-    "height": 600,
-    "padding": {"left": 5, "right": 5, "top": 20, "bottom": 40},
-    "autosize": "none",
-    "signals": [
-      {
-        "name": "NumberDeaths",
-        "value": 6000,
-        "bind": {"input": "range", "min": 6000, "max": 350000}
-      }
-    ],
-    "data": [
-      {
-        "name": "table",
-        "values": [
-          {"state": "Alabama", "num_deaths": 81791},
-          {"state": "Alaska", "num_deaths": 8087},
-          {"state": "Arizona", "num_deaths": 80394},
-          {"state": "Arkansas", "num_deaths":	48017},
-          {"state": "California", "num_deaths":	347837},
-          {"state": "Colorado", "num_deaths":	52174},
-          {"state": "Connecticut", "num_deaths": 35163},
-          {"state": "Delaware", "num_deaths": 12674},
-          {"state": "District of Columbia", "num_deaths": 8387},
-          {"state": "Florida", "num_deaths": 263456},
-          {"state": "Georgia", "num_deaths": 131421},
-          {"state": "Hawaii", "num_deaths": 14148},
-          {"state": "Idaho", "num_deaths": 17620},
-          {"state": "Illinois", "num_deaths": 143269},
-          {"state": "Indiana", "num_deaths": 90977},
-          {"state": "Iowa", "num_deaths": 34848},
-          {"state": "Kansas", "num_deaths": 32816},
-          {"state": "Kentucky", "num_deaths": 74253},
-          {"state": "Louisiana", "num_deaths": 71605},
-          {"state": "Maine", "num_deaths": 18065},
-          {"state": "Maryland", "num_deaths": 70250},
-          {"state": "Massachusetts", "num_deaths": 67991},
-          {"state": "Michigan", "num_deaths": 131562},
-          {"state": "Minnesota", "num_deaths": 50696},
-          {"state": "Mississippi", "num_deaths": 50862},
-          {"state": "Missouri", "num_deaths": 99556},
-          {"state": "Montana", "num_deaths": 12372},
-          {"state": "Nebraska", "num_deaths": 18443},
-          {"state": "Nevada", "num_deaths": 38029},
-          {"state": "New Hampshire", "num_deaths": 15688},
-          {"state": "New Jersey", "num_deaths": 91120},
-          {"state": "New Mexico", "num_deaths": 27746},
-          {"state": "New York", "num_deaths": 262854},
-          {"state": "North Carolina", "num_deaths": 134245},
-          {"state": "North Dakota", "num_deaths": 6767},
-          {"state": "Ohio", "num_deaths": 167344},
-          {"state": "Oklahoma", "num_deaths": 60262},
-          {"state": "Oregon", "num_deaths": 46503},
-          {"state": "Pennsylvania", "num_deaths": 165456},
-          {"state": "Rhode Island", "num_deaths": 11529},
-          {"state": "South Carolina", "num_deaths": 75507},
-          {"state": "South Dakota", "num_deaths": 9097},
-          {"state": "Tennessee", "num_deaths": 106691},
-          {"state": "Texas", "num_deaths": 295950},
-          {"state": "Utah", "num_deaths": 24555},
-          {"state": "Vermont", "num_deaths": 7277},
-          {"state": "Virginia", "num_deaths": 93751},
-          {"state": "Washington", "num_deaths": 74436},
-          {"state": "West Virginia", "num_deaths": 34459},
-          {"state": "Wisconsin", "num_deaths": 63570},
-          {"state": "Wyoming", "num_deaths": 6926}
-        ],
-        "transform": [
-          {
-            "type": "filter",
-            "expr": "datum.num_deaths >= NumberDeaths"
-          }
-        ]
-      }
-    ],
-    "scales": [
-      {
-        "name": "size",
-        "domain": {"data": "table", "field": "num_deaths"},
-        "range": [1200, 20000],
-        "nice": true
-      },
-      {
-        "name": "color",
-        "type": "linear",
-        "domain": [6000, 20000, 50000, 80000, 100000, 400000],
-        "range": ["#fcbba1", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"]
-      }
-    ],
-    "legends": [
-      {
-        "fill": "color",
-        "title": "Number of Deaths",
-        "gradientLength": 260,
-        "gradientThickness": 20,
-        "direction": "horizontal",
-        "tickCount": 6,
-        "titleFontSize": 12,
-        "labelFontSize": 10,
-        "orient": "bottom",
-        "offset": -20
-      }
-    ],
-    "marks": [
-      {
-        "name": "nodes",
-        "type": "symbol",
-        "from": {"data": "table"},
-        "encode": {
-          "enter": {
-            "fill": {"scale": "color", "field": "num_deaths"},
-            "xfocus": {"signal": "width / 2"},
-            "yfocus": {"signal": "height / 2"}
-          },
-          "update": {
-            "size": {"signal": "scale('size', datum.num_deaths)"},
-            "stroke": {"value": "white"},
-            "strokeWidth": {"value": 2},
-            "tooltip": {"signal": "datum"}
-          }
-        },
-        "transform": [
-          {
-            "type": "force",
-            "iterations": 100,
-            "static": false,
-            "forces": [
-              {
-                "force": "collide",
-                "iterations": 2,
-                "radius": {"expr": "sqrt(datum.size) / 2"}
-              },
-              {"force": "center", "x": {"signal": "width / 2"}, "y": {"signal": "height / 2"}},
-              {"force": "x", "x": "xfocus"},
-              {"force": "y", "y": "yfocus"}
-            ]
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "from": {"data": "nodes"},
-        "encode": {
-          "enter": {
-            "align": {"value": "center"},
-            "baseline": {"value": "middle"},
-            "fontSize": {"value": 8},
-            "fill": {"value": "white"},
-            "text": {"field": "datum.state"}
-          },
-          "update": {"x": {"field": "x"}, "y": {"field": "y"}}
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 600,
+  "padding": {"left": 5, "right": 5, "top": 20, "bottom": 40},
+  "autosize": "none",
+  "signals": [
+    {
+      "name": "NumberDeaths",
+      "value": 6000,
+      "bind": {"input": "range", "min": 6000, "max": 350000}
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"state": "Alabama", "num_deaths": 81791},
+        {"state": "Alaska", "num_deaths": 8087},
+        {"state": "Arizona", "num_deaths": 80394},
+        {"state": "Arkansas", "num_deaths":	48017},
+        {"state": "California", "num_deaths":	347837},
+        {"state": "Colorado", "num_deaths":	52174},
+        {"state": "Connecticut", "num_deaths": 35163},
+        {"state": "Delaware", "num_deaths": 12674},
+        {"state": "District of Columbia", "num_deaths": 8387},
+        {"state": "Florida", "num_deaths": 263456},
+        {"state": "Georgia", "num_deaths": 131421},
+        {"state": "Hawaii", "num_deaths": 14148},
+        {"state": "Idaho", "num_deaths": 17620},
+        {"state": "Illinois", "num_deaths": 143269},
+        {"state": "Indiana", "num_deaths": 90977},
+        {"state": "Iowa", "num_deaths": 34848},
+        {"state": "Kansas", "num_deaths": 32816},
+        {"state": "Kentucky", "num_deaths": 74253},
+        {"state": "Louisiana", "num_deaths": 71605},
+        {"state": "Maine", "num_deaths": 18065},
+        {"state": "Maryland", "num_deaths": 70250},
+        {"state": "Massachusetts", "num_deaths": 67991},
+        {"state": "Michigan", "num_deaths": 131562},
+        {"state": "Minnesota", "num_deaths": 50696},
+        {"state": "Mississippi", "num_deaths": 50862},
+        {"state": "Missouri", "num_deaths": 99556},
+        {"state": "Montana", "num_deaths": 12372},
+        {"state": "Nebraska", "num_deaths": 18443},
+        {"state": "Nevada", "num_deaths": 38029},
+        {"state": "New Hampshire", "num_deaths": 15688},
+        {"state": "New Jersey", "num_deaths": 91120},
+        {"state": "New Mexico", "num_deaths": 27746},
+        {"state": "New York", "num_deaths": 262854},
+        {"state": "North Carolina", "num_deaths": 134245},
+        {"state": "North Dakota", "num_deaths": 6767},
+        {"state": "Ohio", "num_deaths": 167344},
+        {"state": "Oklahoma", "num_deaths": 60262},
+        {"state": "Oregon", "num_deaths": 46503},
+        {"state": "Pennsylvania", "num_deaths": 165456},
+        {"state": "Rhode Island", "num_deaths": 11529},
+        {"state": "South Carolina", "num_deaths": 75507},
+        {"state": "South Dakota", "num_deaths": 9097},
+        {"state": "Tennessee", "num_deaths": 106691},
+        {"state": "Texas", "num_deaths": 295950},
+        {"state": "Utah", "num_deaths": 24555},
+        {"state": "Vermont", "num_deaths": 7277},
+        {"state": "Virginia", "num_deaths": 93751},
+        {"state": "Washington", "num_deaths": 74436},
+        {"state": "West Virginia", "num_deaths": 34459},
+        {"state": "Wisconsin", "num_deaths": 63570},
+        {"state": "Wyoming", "num_deaths": 6926}
+      ],
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.num_deaths >= NumberDeaths"
         }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "size",
+      "domain": {"data": "table", "field": "num_deaths"},
+      "range": [1200, 20000],
+      "nice": true
+    },
+    {
+      "name": "color",
+      "type": "linear",
+      "domain": [6000, 20000, 50000, 80000, 100000, 400000],
+      "range": ["#fcbba1", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"]
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "title": "Number of Deaths",
+      "gradientLength": 260,
+      "gradientThickness": 20,
+      "direction": "horizontal",
+      "tickCount": 6,
+      "titleFontSize": 12,
+      "labelFontSize": 10,
+      "orient": "bottom",
+      "offset": -20
+    }
+  ],
+  "marks": [
+    {
+      "name": "nodes",
+      "type": "symbol",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "fill": {"scale": "color", "field": "num_deaths"},
+          "xfocus": {"signal": "width / 2"},
+          "yfocus": {"signal": "height / 2"}
+        },
+        "update": {
+          "size": {"signal": "scale('size', datum.num_deaths)"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 2},
+          "tooltip": {"signal": "{'State:': datum.state, 'Number of Deaths:': datum.num_deaths}"}
+        }
+      },
+      "transform": [
+        {
+          "type": "force",
+          "iterations": 100,
+          "static": false,
+          "forces": [
+            {
+              "force": "collide",
+              "iterations": 2,
+              "radius": {"expr": "sqrt(datum.size) / 2"}
+            },
+            {"force": "center", "x": {"signal": "width / 2"}, "y": {"signal": "height / 2"}},
+            {"force": "x", "x": "xfocus"},
+            {"force": "y", "y": "yfocus"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "from": {"data": "nodes"},
+      "encode": {
+        "enter": {
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 8},
+          "fill": {"value": "white"},
+          "text": {"field": "datum.state"}
+        },
+        "update": {"x": {"field": "x"}, "y": {"field": "y"}}
       }
-    ]
-  }
-  
+    }
+  ]
+}
