@@ -46,7 +46,8 @@
                 "titleFontSize": 14,
                 "titlePadding": 20,
                 "labelFontSize": 12,
-                "labelAngle": 0,
+                "labelAngle": -15,
+                "labelAlign":"center",
                 "labelPadding": 10
             }
         },
