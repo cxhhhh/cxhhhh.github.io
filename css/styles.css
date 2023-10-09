@@ -2,7 +2,6 @@ body *{
     font-family: 'Open Sans', sans-serif;
   }
 
-
 .page {
     width: 1100px;
     background-color: #f1fcfe9b;
@@ -18,10 +17,6 @@ body *{
 .vis50-container {
     width: 50%;
 	/* background-color: #f1fcfe9b */
-}
-
-.spaceBtwGraph{
-    height: 30px;
 }
 
 .MainTitle {
@@ -48,10 +43,16 @@ body *{
     font-family:'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 35px;
-    /* text-decoration: overline; */
     color: Black;
     text-align: center;
-    word-spacing: 15px;
+    word-spacing: 8px;
+}
+
+.GraphParagrapgh{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
 }
 
 .space{
@@ -60,4 +61,74 @@ body *{
 
 .pure-g {
     margin-bottom: 40px;
+}
+
+.choroplethBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #0381c9;
+    word-spacing: 8px;
+}
+
+.choroplethBoldParagraph {
+    font-weight: bold;
+    color: #0381c9;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.hint{
+    color: grey;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.dotBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #fb0f6e;
+    word-spacing: 8px;
+}
+
+.dotBoldParagraph {
+    font-weight: bold;
+    color: #fb0f6e;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.bubbleBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #cb181d;
+    word-spacing: 8px;
+}
+
+.bubbleBoldParagraph {
+    font-weight: bold;
+    color: #cb181d;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.populationBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #1d91c0;
+    word-spacing: 8px;
+}
+
+.populationBoldParagraph {
+    font-weight: bold;
+    color: #1d91c0;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
 }

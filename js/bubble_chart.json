@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 800,
+  "width": 700,
   "height": 600,
   "padding": {"left": 5, "right": 5, "top": 20, "bottom": 40},
   "autosize": "none",
@@ -93,7 +93,7 @@
     {
       "fill": "color",
       "title": "Number of Deaths",
-      "gradientLength": 260,
+      "gradientLength": 200,
       "gradientThickness": 20,
       "direction": "horizontal",
       "tickCount": 6,

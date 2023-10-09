@@ -1,13 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Percentage of vaccinated of each County in the US in 2020",
-        "fontSize":18
-    },
     "view": {"stroke":"#f1fcfe9b"},
     "background":"#f1fcfe9b",
-    "width": 1000,
-    "height": 500,
+    "width": 650,
+    "height": 460,
     "data": {
       "url": "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json",
       "format": {
@@ -15,7 +11,11 @@
             "feature": "counties"
         }
     },
-    
+    "projection": {
+    "type": "albersUsa",
+    "scale": 850,
+    "translate": [350, 200]
+    },
     "layer": [
         {
             "transform": [  
@@ -41,7 +41,9 @@
                 {"name": "select", "select": "point"}
             ],
             "projection": {
-                "type": "albersUsa"
+                "type": "albersUsa",
+                    "scale": 850,
+                    "translate": [350, 200]
             },
             "mark": {
                 "type": "geoshape",
@@ -58,9 +60,9 @@
                             "title": "Percentage of vaccinated",
                             "titleFontSize": 12,
                             "direction": "horizontal",
-                            "orient":"bottom-right",
+                            "orient":"none",
                             "gradientLength": 140,
-                            "padding":-10
+                            "padding": 370
                         },
                         "scale": {
                             "range": ["#ffffd9",
