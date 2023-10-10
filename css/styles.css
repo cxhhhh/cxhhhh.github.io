@@ -117,7 +117,7 @@ body *{
     word-spacing: 2px;
 }
 
-.populationBoldTitle {
+.donutBoldTitle {
     font-family:'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 35px;
@@ -125,10 +125,105 @@ body *{
     word-spacing: 8px;
 }
 
-.populationBoldParagraph {
+.donutBoldParagraph {
     font-weight: bold;
     color: #1d91c0;
     font-family:'Times New Roman', Times, serif;
     font-size: 22px;
     word-spacing: 2px;
+}
+
+.barBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #c22a2f;
+    word-spacing: 8px;
+}
+
+.redBoldParagraph {
+    font-weight: bold;
+    color: #c22a2f;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.blueBoldParagraph {
+    font-weight: bold;
+    color: #0574b4;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.inactiveBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #3347c7;
+    word-spacing: 8px;
+}
+
+.sleepBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #fb0f6e;
+    word-spacing: 8px;
+}
+
+.inactiveBoldParagraph {
+    font-weight: bold;
+    color: #3347c7;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.sleepBoldParagraph {
+    font-weight: bold;
+    color: #fb0f6e;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.physicalBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #2dd0aa;
+    word-spacing: 8px;
+}
+
+.mentalBoldTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #f5766b;
+    word-spacing: 8px;
+}
+
+.physicalBoldParagraph {
+    font-weight: bold;
+    color: #2dd0aa;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.mentalBoldParagraph {
+    font-weight: bold;
+    color: #f5766b;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.endParagraph {
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    word-spacing: 3px;
 }

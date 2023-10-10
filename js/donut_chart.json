@@ -35,15 +35,11 @@
                 "color": {"field": "state", 
                     "type": "nominal", 
                     "scale": {"scheme": "tableau20"}, 
-                    "legend": {
-                        "title": "States",
-                        "padding": 80,
-                        "offset": -55
-                    }
+                    "legend": null
                 },
                 "tooltip":[
                     {"field": "state", "type": "nominal", "title": "State"},
-                    {"field": "value", "type": "quantitative", "title": "Total Population"}
+                    {"field": "value", "type": "quantitative", "title": "Population"}
                 ],
                 "strokeWidth": {
                     "condition": [{"param": "hover", "empty": false, "value": 3}],
@@ -54,7 +50,7 @@
         },
   
         {
-            "transform": [{"calculate": "'Total Population'", "as": "text_annotation"}],
+            "transform": [{"calculate": "'Population'", "as": "text_annotation"}],
             "mark": {"type": "text"},
             "encoding": {
             "text": {"field": "text_annotation"},
@@ -64,20 +60,22 @@
         },
         {
             "transform": [{"calculate": "'California'", "as": "text"}],
-            "mark": {"type": "text", "dx": -80, "dy": -110},
+            "mark": {"type": "text", "dx": -140, "dy": -10},
             "encoding": {
                 "text": {"field": "text"},
                 "color": {"value": "white"},
-                "size": {"value": 12}
+                "size": {"value": 12},
+                "angle": {"value": 50}
             }
         },
         {
             "transform": [{"calculate": "'Florida'", "as": "text"}],
-            "mark": {"type": "text", "dx": -10, "dy": 150},
+            "mark": {"type": "text", "dx": -140, "dy": 15},
             "encoding": {
                 "text": {"field": "text"},
                 "color": {"value": "white"},
-                "size": {"value": 12}
+                "size": {"value": 12},
+                "angle": {"value": -80}
             }
         },
         {
@@ -91,11 +89,110 @@
         },
         {
             "transform": [{"calculate": "'Texas'", "as": "text"}],
-            "mark": {"type": "text", "dx": -105, "dy": 110},
+            "mark": {"type": "text", "dx": -145, "dy": -5},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -50}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Illinois'", "as": "text"}],
+            "mark": {"type": "text", "dx": 145, "dy": 15},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": 60}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Pennsylvania'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": 10},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": 40}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Ohio'", "as": "text"}],
+            "mark": {"type": "text", "dx": 140, "dy": 60},
             "encoding": {
                 "text": {"field": "text"},
                 "color": {"value": "white"},
                 "size": {"value": 12}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Georgia'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": 15},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12}
+            }
+        },
+        {
+            "transform": [{"calculate": "'North Carolina'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": -5},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -10}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Michigan'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": -10},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -25}
+            }
+        },
+        {
+            "transform": [{"calculate": "'New Jersey'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": 0},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -45}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Virginia'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": 0},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -60}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Missouri'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": -5},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -70}
+            }
+        },
+        {
+            "transform": [{"calculate": "'Indiana'", "as": "text"}],
+            "mark": {"type": "text", "dx": 150, "dy": 0},
+            "encoding": {
+                "text": {"field": "text"},
+                "color": {"value": "white"},
+                "size": {"value": 12},
+                "angle": {"value": -85}
             }
         }
   

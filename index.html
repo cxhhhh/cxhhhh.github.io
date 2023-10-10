@@ -71,8 +71,7 @@
     </div>
 
     <!-- Bubble chart -->
-    <div class = space></div>
-    <div class="GraphTitle" style="margin-top: 20px;"><span class = bubbleBoldTitle>Number of Deaths</span>in each State in US in 2020</div>
+    <div class="GraphTitle" style="margin-top: 80px;"><span class = bubbleBoldTitle>Number of Deaths</span> in each State in the US in 2020</div>
     <div class = space></div>
 
     <div class="pure-g">
@@ -91,18 +90,61 @@
     </div>
 
     <!-- Donut chart -->
-
-
-    <div class="pure-u-1-2">
-    <div id="vis4" class="vis-container"></div>
+    <div class="GraphTitle" style="margin-top: 90px;"><span class = donutBoldTitle>Polutaion </span>of the <span class = donutBoldTitle>top 15 COVID-19 Deaths States</span> in the US</div>
+    <div class = space></div>
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis6" class="vis-container", style = "margin-left: 120px;"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="GraphParagrapgh" style="margin-left: -90px; margin-right: 100px;">
+          <br><br><br>
+          This figure shows the <span class = donutBoldParagraph>population</span> of the <span class = donutBoldParagraph>top 15 COVID-19 Deaths States</span> in the US. 
+          Each color represents a different state.
+          <br><br><span class = donutBoldParagraph>California</span> has the largest population, followed by <span class = donutBoldParagraph>New York</span> and <span class = donutBoldParagraph>Texas</span>.
+          <br><br>
+          <span class = hint>Moving the mouse to view the population of each state.</span>
+        </div>
+      </div>
     </div>
 
-
-
+    <!-- Stacked bar chart -->
+    <div class="GraphTitle" style="margin-top: 80px;"><span class = barBoldTitle>Unhealthy habits</span> of the <span class = barBoldTitle>top 15 COVID-19 Deaths States</span> in the US</div>
     <div class = space></div>
-    <div class="GraphTitle">Frequent Physical & Mental Distress in 15 States</div>
-    <div class = space></div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+    </div>
 
+    <!-- Radar chart -->
+    <div class="GraphTitle" style="margin-top: 80px;"><span class = inactiveBoldTitle>Physically Inactive </span> & <span class = sleepBoldTitle>Insufficient Sleep</span> in 15 States</div>
+    <div class = space></div>
+    <div class = space></div>
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="GraphParagrapgh" style="margin-left: -50px ;margin-right: 30px; margin-bottom: 100;">
+          <br>
+          It is obvious from the above figure that <span class = redBoldParagraph>Texas</span> has the <span class = redBoldParagraph>most cases</span> of bad habits, 
+          its <span class = redBoldParagraph>population</span> is <span class = redBoldParagraph>not</span> the largest, but the <span class = redBoldParagraph>deaths</span> of COVID-19 in Texas is also <span class = redBoldParagraph>large</span>.
+          <br><br>
+          The population of <span class = blueBoldParagraph>New York</span> is a little <span class = blueBoldParagraph>larger</span> than that of <span class = redBoldParagraph>Texas</span>, 
+          but there are <span class = blueBoldParagraph>far fewer cases</span> of bad habits in New York, and the <span class = blueBoldParagraph>deaths</span> of COVID-19 in <span class = blueBoldParagraph>New York</span> is <span class = blueBoldParagraph>less</span> than that of <span class = redBoldParagraph>Texas</span>.
+          <br><br>
+          From the graph on the left, it can be seen that people in <span class = redBoldParagraph>Texas</span>  <span class = inactiveBoldParagraph>do not exercise regularly</span> and <span class = sleepBoldParagraph>lack sleep</span>. 
+          <br><br>From the comparison chart of physical and mental health below, it can also be seen that Texas has the <span class = redBoldParagraph>worst</span> <span class = physicalBoldParagraph>physical</span> and <span class = mentalBoldParagraph>mental</span> health. 
+          <br><br>Therefore, unhealthy habits will <span class = redBoldParagraph>affect</span> people's physical and mental health and COVID-19.
+        </div>
+      </div>
+    </div>
+
+    <!-- Butterfly chart -->
+    <div class = space></div>
+    <div class="GraphTitle">Frequent <span class = physicalBoldTitle>Physical</span> & <span class = mentalBoldTitle>Mental</span> Distress in 15 States</div>
+    <div class = space></div>
     <div class="pure-g">
       <div class="pure-u-1-3" style="margin-left: 0px; margin-top: 25px;">
         <div id="vis7" class="vis-container"></div>
@@ -112,6 +154,13 @@
       </div>
     </div>
 
+    <!-- End -->
+    <div class="endParagraph">
+      <p>Visualisation is created by Chen XinHui.
+      <br> Data source is <a href="#" target=" _blank">https://www.kaggle.com/datasets/johnjdavisiv/us-counties-covid19-weather-sociohealth-data</href>.
+      </p>
+    </div>
+    
   </div>
 
   <script type="text/javascript">

@@ -1,14 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "title": {
-        "text": "Physically inactive and insufficient sleep of top 15 COVID-19 states",
-        "dx": -100,
-        "dy": 510},
     "view": {"stroke":"#f1fcfe9b"},
     "background":"#f1fcfe9b",
-    "width": 500,
-    "height": 550,
-    "padding": 40,
+    "width": 600,
+    "height": 600,
+    "padding": 50,
     "autosize": {"type": "none", "contains": "padding"},
   
     "signals": [
@@ -164,7 +160,8 @@
                         {"value": "bottom"}
                     ],
                     "fill": {"value": "black"},
-                    "fontWeight": {"value": "bold"}
+                    "fontWeight": {"value": "bold"},
+                    "fontSize":{"value": 14}
                 }
             }
         },
@@ -188,8 +185,10 @@
             "fill": "color",
             "title": "Unhealthy Types",
             "orient": "right",
-            "offset": -500,
-            "padding": 210
+            "offset": -600,
+            "padding": 250,
+            "titleFontSize":14,
+            "labelFontSize":14
         }
     ]
 }
