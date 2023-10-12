@@ -51,7 +51,13 @@
               "grid": false
             }
           },
-          "fill": {"value": "#fcc5c0"},
+          "fill": {
+            "condition": {
+              "test": "datum.state === 'Texas' || datum.state === 'New York'",
+              "value": "#D41159"
+            },
+            "value": "#fcc5c0"
+          },
           "fillOpacity": {
             "condition": {
               "param": "select",
@@ -105,10 +111,11 @@
               {"field": "percent_frequent_mental_distress", "type": "quantitative", "title": "Total Percentage of Frequent Mental Distress"}
             ],
             "color":{
-              "legend":null,
-              "field":"state",
-              "type": "nominal",
-              "scale": {"scheme": "tableau20"}
+              "condition": {
+                "test": "datum.state === 'Texas' || datum.state === 'New York'",
+                "value": "#D41159"
+              },
+              "value": "#fcc5c0"
             }
           }
       }
