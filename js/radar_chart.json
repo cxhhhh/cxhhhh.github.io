@@ -81,7 +81,7 @@
             "name": "color",
             "type": "ordinal",
             "domain": {"data": "table", "field": "category"},
-            "range": ["#253494", "#fb0f6e"]
+            "range": ["#f57519", "#752fee"]
         }
     ],
   
