@@ -169,13 +169,13 @@ body *{
     font-family:'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 35px;
-    color: #8241f3;
+    color: #752fee;
     word-spacing: 8px;
 }
 
 .inactiveBoldParagraph {
     font-weight: bold;
-    color: #3347c7;
+    color: #f57519;
     font-family:'Times New Roman', Times, serif;
     font-size: 22px;
     word-spacing: 2px;
@@ -183,7 +183,7 @@ body *{
 
 .sleepBoldParagraph {
     font-weight: bold;
-    color: #fb0f6e;
+    color: #752fee;
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
     word-spacing: 2px;
